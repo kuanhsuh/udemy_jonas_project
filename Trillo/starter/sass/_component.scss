@@ -1,0 +1,57 @@
+//////////////////////////////////////////////
+// LOGO 
+.logo {
+    height: .325rem;
+}
+
+//////////////////////////////////////////////
+// SEARCHBOX 
+
+.search {
+    &__input {
+        
+    }
+
+    &__button {
+
+    }
+
+    &__icon {
+        height: .2rem;
+        width: .2rem;
+    }
+}
+
+
+
+
+//////////////////////////////////////////////
+// USER NAVIGATION
+
+.user-nav {
+    &__icon-box {
+        
+    }
+
+    &__icon {
+        height: .225rem;
+        width: .225rem
+    }
+
+    &__notification {
+        
+    }
+
+    &__user {
+        
+    }
+
+    &__user-photo {
+        height: .375rem;
+        border-radius: 50%;
+    }
+
+    &__user-name {
+        
+    }
+}
