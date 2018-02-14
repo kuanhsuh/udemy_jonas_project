@@ -60,9 +60,13 @@ body {
   min-height: 5rem; }
 
 .header {
+  font-size: .14rem;
   height: .7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2); }
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -77,16 +81,80 @@ body {
   flex: 1; }
 
 .logo {
-  height: .325rem; }
+  height: .325rem;
+  margin-left: .2rem; }
 
-.search__icon {
-  height: .2rem;
-  width: .2rem; }
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .07rem .2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s;
+    margin-right: -.35rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
+  .search__input:focus + .search__button {
+    background-color: var(--color-grey-light-3); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-2); }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(2px); }
+  .search__icon {
+    height: .2rem;
+    width: .2rem;
+    fill: var(--color-grey-light-3); }
 
-.user-nav__icon {
-  height: .225rem;
-  width: .225rem; }
-
-.user-nav__user-photo {
-  height: .375rem;
-  border-radius: 50%; }
+.user-nav {
+  display: flex;
+  align-self: stretch;
+  align-items: center; }
+  .user-nav > * {
+    padding: 0 .2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    padding: 0 .2rem;
+    cursor: pointer;
+    background-color: var(--color-grey-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
+  .user-nav__icon {
+    height: .225rem;
+    width: .225rem;
+    fill: var(--color-grey-dark-2); }
+  .user-nav__notification {
+    font-size: .08rem;
+    height: .175rem;
+    width: .175rem;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    position: absolute;
+    color: #FFF;
+    top: .15rem;
+    right: .11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-nav__user-photo {
+    height: .375rem;
+    border-radius: 50%;
+    margin-right: .1rem; }

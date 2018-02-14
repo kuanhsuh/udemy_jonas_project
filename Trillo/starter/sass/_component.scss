@@ -2,23 +2,64 @@
 // LOGO 
 .logo {
     height: .325rem;
+    margin-left: .2rem;
 }
 
 //////////////////////////////////////////////
 // SEARCHBOX 
 
 .search {
+    flex: 0 0 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &__input {
-        
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .07rem .2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -.35rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
     }
 
     &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
 
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
 
     &__icon {
         height: .2rem;
         width: .2rem;
+        fill:  var(--color-grey-light-3);
     }
 }
 
@@ -29,29 +70,52 @@
 // USER NAVIGATION
 
 .user-nav {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+
+    & > * {
+        padding: 0 .2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        padding: 0 .2rem;
+        cursor: pointer;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__icon-box {
-        
+        position: relative;
     }
 
     &__icon {
         height: .225rem;
-        width: .225rem
+        width: .225rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &__notification {
-        
-    }
-
-    &__user {
-        
+        font-size: .08rem;
+        height: .175rem;
+        width: .175rem;
+        border-radius: 100px;
+        background-color: var(--color-primary);
+        position: absolute;
+        color: #FFF;
+        top: .15rem;
+        right: .11rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__user-photo {
         height: .375rem;
         border-radius: 50%;
-    }
-
-    &__user-name {
-        
+        margin-right: .1rem;
     }
 }
